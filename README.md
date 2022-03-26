@@ -62,4 +62,11 @@ We will require a backend UI which will display all claims made in a table with 
 
 ![index](https://user-images.githubusercontent.com/33762147/160181887-df879218-0dbc-4f9c-9dbf-cfbdfa54dc0e.png)
 
+## Proposed Deployment Locations
+
+|Desc|Domain|
+|-------|-----------|
+|sSDEX Faucet|https://claim.sigmadex.org|
+|Claim History|https://claim.sigmadex.org/history|
+
 [event logs]: https://consensys.net/blog/developers/guide-to-events-and-logs-in-ethereum-smart-contracts/
