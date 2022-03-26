@@ -49,7 +49,7 @@ eg. `https://claim.sigmadex.org/ref=0xf289752B420e10444f0d271267192a1e824977cd`
 ### Other requirements
 #### Backend
 
-We will require a backend UI which will display all claims made in a table with the following data:
+Backend UI displaying all claims made in a table with the following data:
 
 <div align="center">
 
