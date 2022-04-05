@@ -47,7 +47,7 @@ eg. `https://claim.sigmadex.org/ref=0xf289752B420e10444f0d271267192a1e824977cd`
 * Referred user gets credited 100 sSDEX and referral user receives 10 sSDEX
 
 ### Other requirements
-#### Backend
+#### Admin Panel Backend
 
 Backend UI displaying all claims made in a table with the following data:
 
@@ -67,6 +67,6 @@ Backend UI displaying all claims made in a table with the following data:
 |Desc|Domain|
 |-------|-----------|
 |sSDEX Faucet|https://claim.sigmadex.org|
-|Claim History|https://claim.sigmadex.org/history|
+|Admin Panel|https://claim.sigmadex.org/admin|
 
 [event logs]: https://consensys.net/blog/developers/guide-to-events-and-logs-in-ethereum-smart-contracts/
