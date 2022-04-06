@@ -60,7 +60,7 @@ Backend UI displaying all claims made in a table with the following data:
 
 ## Workflow
 
-Include check if already made claim.
+Add check if already made claim upon connecting wallet.
 * IF CLAIM made, show balance
 * If claim not made, show below
 
