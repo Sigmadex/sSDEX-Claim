@@ -60,7 +60,15 @@ Backend UI displaying all claims made in a table with the following data:
 
 ## Workflow
 
+Include check if already made claim.
+* IF CLAIM made, show balance
+* If claim not made, show below
+
 ![index](https://user-images.githubusercontent.com/33762147/160181887-df879218-0dbc-4f9c-9dbf-cfbdfa54dc0e.png)
+
+## Figma Design
+
+https://www.figma.com/file/HoSWUNB3DI2mvLBT7JqcwS/sSDEX-Claim-Drop?node-id=0%3A1
 
 ## Proposed Deployment Locations
 
