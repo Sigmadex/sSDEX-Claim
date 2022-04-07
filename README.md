@@ -60,11 +60,7 @@ Backend UI displaying all claims made in a table with the following data:
 
 ## Workflow
 
-Add check if already made claim upon connecting wallet.
-* IF CLAIM made, show balance
-* If claim not made, show below
-
-![index](https://user-images.githubusercontent.com/33762147/160181887-df879218-0dbc-4f9c-9dbf-cfbdfa54dc0e.png)
+![index](https://user-images.githubusercontent.com/33762147/162211803-720a4132-b93a-4bec-852c-80697068eb17.png)
 
 ## Figma Design
 
