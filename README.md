@@ -48,7 +48,7 @@ eg. `https://claim.sigmadex.org/ref=0xf289752B420e10444f0d271267192a1e824977cd`
 
 ### Other requirements
 
-* Use lightboxes for error messages
+* Use lightboxes to render error messages
 
 #### Admin Panel Backend
 
