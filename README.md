@@ -18,6 +18,7 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 
 * Claim data is to be stored on-chain through [event logs]
 * Interface should query event logs to verify whether a wallet has made a claim or not and send them to the appropriate landing page
+* Bot should take 150 nAVAX for future distribution
 
 ### Outlined below is the process in which the user qualifies for a claim
 
