@@ -18,7 +18,6 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 
 * Claim data is to be stored on-chain through [event logs]
 * Interface should query event logs to verify whether a wallet has made a claim or not and send them to the appropriate landing page
-* Bot should take 150 nAVAX for future distribution
 
 ### Outlined below is the process in which the user qualifies for a claim
 
@@ -32,7 +31,7 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 |> 10 < 100 |5000|
 |> 100 |12,500|
 
-3. User confirms with metamask the amount claimable, bot collects a small fixed amount for gas
+3. User confirms with metamask the amount claimable, user pays the gas fees
 
 ### User already made a claim
 
@@ -44,7 +43,7 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 * User interacts with claim bot interface using a referral wallet address that has already made a claim:
 eg. `https://claim.sigmadex.org/ref=0xf289752B420e10444f0d271267192a1e824977cd`
 * User interface displays the amount which can be claimed (100 sSDEX)
-* User confirms with metamask the amount claimable, bot collects a small fixed amount for gas
+* User confirms with metamask the amount claimable
 * Referred user gets credited 100 sSDEX and referral user receives 10 sSDEX
 
 ### Other requirements
