@@ -68,7 +68,7 @@ Backend UI displaying all claims made in a table with the following data:
 
 ## Figma Design
 
-https://www.figma.com/file/HoSWUNB3DI2mvLBT7JqcwS/sSDEX-Claim-Drop?node-id=0%3A1
+![2022-06-07_13-17-55](https://user-images.githubusercontent.com/33762147/172464391-645eec60-8977-49d0-bac1-65d5dadc5809.jpg)
 
 ## Proposed Deployment Locations
 
