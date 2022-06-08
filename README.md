@@ -56,8 +56,8 @@ Backend UI displaying all claims made in a table with the following data:
 
 <div align="center">
 
-|TX ID|Timestamp|Wallet Address|AVAX Balance at Snapshot|Claim Amount|
-|-----|---------|--------------|------------|------------------------|
+|Wallet Address|AVAX Balance at Snapshot|Claim Amount|
+|--------------|------------|------------------------|
 
 </div>
 
