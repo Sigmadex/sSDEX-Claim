@@ -31,6 +31,8 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 |> 10 < 100 |5000|
 |> 100 |12,500|
 
+*Parameters subject to change*
+
 3. User confirms with metamask the amount claimable, user pays the gas fees
 
 ### User already made a claim
@@ -56,8 +58,8 @@ Backend UI displaying all claims made in a table with the following data:
 
 <div align="center">
 
-|Wallet Address|AVAX Balance at Snapshot|Claim Amount|
-|--------------|------------|------------------------|
+|TxID|Timestamp|Wallet Address|AVAX Balance at Snapshot|Claim Amount|
+|----|---------|--------------|------------|------------------------|
 
 </div>
 
@@ -68,12 +70,5 @@ Backend UI displaying all claims made in a table with the following data:
 ## Figma Design
 
 ![2022-06-07_13-17-55](https://user-images.githubusercontent.com/33762147/172464391-645eec60-8977-49d0-bac1-65d5dadc5809.jpg)
-
-## Proposed Deployment Locations
-
-|Desc|Domain|
-|-------|-----------|
-|sSDEX Faucet|https://claim.sigmadex.org|
-|Admin Panel|https://claim.sigmadex.org/admin|
 
 [event logs]: https://consensys.net/blog/developers/guide-to-events-and-logs-in-ethereum-smart-contracts/
