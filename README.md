@@ -69,6 +69,6 @@ Backend UI displaying all claims made in a table with the following data:
 
 ## Figma Design
 
-![2022-06-07_13-17-55](https://user-images.githubusercontent.com/33762147/172464391-645eec60-8977-49d0-bac1-65d5dadc5809.jpg)
+![2022-06-10_9-02-11](https://user-images.githubusercontent.com/33762147/173094449-fe910d69-d3f9-4bc5-9a09-db0fc9439a48.jpg)
 
 [event logs]: https://consensys.net/blog/developers/guide-to-events-and-logs-in-ethereum-smart-contracts/
