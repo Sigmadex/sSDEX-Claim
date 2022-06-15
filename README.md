@@ -63,9 +63,11 @@ Backend UI displaying all claims made in a table with the following data:
 
 </div>
 
+* Button to call `pause` and `unpause` function in the smart contract
+
 ## Workflow
 
-![index](https://user-images.githubusercontent.com/33762147/162211803-720a4132-b93a-4bec-852c-80697068eb17.png)
+![index](https://user-images.githubusercontent.com/33762147/173891450-07c2a432-c158-4a26-b25f-9119d3dc1171.png)
 
 ## Figma
 
