@@ -11,7 +11,7 @@
 * Claim after Dec 31st 2021 with referral link
 
 ## Motivation
-The idea of the claim drop is to leverage an efficent way and provide additional incentives for spreading the word about obtaining free sSDEX. We are looking to achieve over 20,000 independent sSDEX wallet holders and the event is primarily for marketing and Sigmadex brand awareness purposes.
+The idea of the claim drop is to leverage an efficent way and provide additional incentives for spreading the word about obtaining free sSDEX. We are looking to achieve large amount of independent sSDEX wallet holders and the event is primarily for brand awareness purposes.
 
 ## Process
 ### Proposed Data Storage
