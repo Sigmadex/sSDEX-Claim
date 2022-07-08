@@ -43,7 +43,7 @@ The idea of the claim drop is to leverage an efficent way and provide additional
 ### User makes a claim with a referral link
 
 * User interacts with claim bot interface using a referral wallet address that has already made a claim:
-eg. `https://claim.sigmadex.org/ref=0xf289752B420e10444f0d271267192a1e824977cd`
+eg. `https://claim.sigmadex.org/0xf289752B420e10444f0d271267192a1e824977cd`
 * User interface displays the amount which can be claimed (100 sSDEX)
 * User confirms with metamask the amount claimable
 * Referred user gets credited 50 sSDEX and referral user receives 10 sSDEX
