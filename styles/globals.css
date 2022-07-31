@@ -15,7 +15,7 @@ font-family: 'Work Sans', sans-serif;
  }
 
  .connectButton2 {
- @apply scale-90 rounded-lg font-normal w-28 h-8 flex items-center justify-center 
+ @apply rounded-lg font-normal flex items-center justify-center 
  }
 
  .connectButtonActive {
@@ -24,4 +24,9 @@ font-family: 'Work Sans', sans-serif;
 
  .inputSelect {
  @apply relative h-10 rounded-md  text-xs pl-3 outline-0 placeholder-indigo-900
+ }
+
+ .container {
+  margin-left: auto;
+  margin-right: auto;
  }
