@@ -12,7 +12,7 @@ export default function ClaimBox({
   account0: string;
 }) {
   return (
-    <div className="flex w-screen mt-8 justify-center drop-shadow-2xl scale-75 sm:scale-75 md:scale-100 ">
+    <div className="flex mt-8 justify-center drop-shadow-2xl scale-75 sm:scale-75 md:scale-100 ">
       <div className="bg-gray-50 h-[30rem] w-[36rem] rounded-2xl grid justify-center items-center">
         <h1 className="font-bold text-4xl text-center mt-8 text-gray-700">Claim SDEX</h1>
         <div className="flex items-center justify-center ">
