@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { hooks, metaMask } from "../../connectors/metaMask";
 import { ConnectWithSelect } from "../ConnectWithSelect";
-import { Status } from "../Status";
+// import { Status } from "../Status";
 import React from "react";
 
 const {
