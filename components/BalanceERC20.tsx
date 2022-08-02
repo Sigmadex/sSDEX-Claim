@@ -12,7 +12,7 @@ export function BalanceERC20({
       method: "eth_requestAccounts",
     });
     const account = accounts[0];
-    const tokenAddress = "0x0559B352748d2CE1B492c640fE03721e333968db";
+    const tokenAddress = "0xd4dD1816fe6879752895b2718D5947EDf33aFc0C";
     const tokenContract = new web3.eth.Contract(
       [
         {
