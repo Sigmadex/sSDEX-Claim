@@ -12,19 +12,19 @@ export default function ClaimBox({
   account0: string;
 }) {
   return (
-    <div className="flex mt-8 justify-center drop-shadow-2xl scale-75 sm:scale-75 md:scale-100 ">
-      <div className="bg-gray-50 h-[30rem] w-[36rem] rounded-2xl grid justify-center items-center">
-        <h1 className="font-bold text-4xl text-center mt-8 text-gray-700">Claim SDEX</h1>
+    <div className="flex mt-8 justify-center items-center drop-shadow-2xl scale-100 sm:scale-75 md:scale-100  md:h-[calc(100vh-theme(space.72))]">
+      <div className="bg-gray-50 h-[30rem] md:w-[36rem] m-3 md:m-0 p-5 md:p-0  rounded-2xl grid justify-center items-center">
+        <h1 className="font-bold text-2xl md:text-4xl text-center mt-8 text-gray-700">Claim SDEX</h1>
         <div className="flex items-center justify-center ">
           {" "}
-          <p className="w-96 text-xs text-center scale-90 sm:scale-100 my-4 text-gray-800">
+          <p className="md:w-96 text-xs text-center md:scale-90 sm:scale-100 sm:my-4 text-gray-800">
             As part of our brand awareness initiative, both loyal and newcomers
             to the AVAX community are eligible to claim free sSDEX tokens
             relative to their AVAX balance.
           </p>
         </div>
 
-        <div className="h-28 w-[28rem] sm:w-[30rem] bg-gray-50 drop-shadow-md  rounded-2xl grid items-center p-4">
+        <div className="h-28 sm:w-[30rem] bg-gray-50 drop-shadow-md  rounded-2xl grid items-center p-4">
           <div className="flex justify-between">
             <div className="flex gap-2 items-center">
               <Image
