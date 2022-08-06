@@ -7,22 +7,22 @@ export default function Header() {
 
     return (
         <div className="">
-          <div className="flex justify-between w-screen">
-            <div className="flex items-end pl-10">
+          <div className="sm:flex justify-between">
+            <div className="flex justify-center sm:justify-start items-end sm:px-10">
               <Image
                 src="/img/Logo.svg"
                 layout="fixed"
-                height={80}
-                width={150}
+                height={96}
+                width={156}
               />
             </div>
 
-            <div className="flex justify-end items-center p-3 pr-6 gap-2 text-white border-gray-50">
+            <div className="flex justify-center sm:justify-end items-center p-3 pr-10 gap-5 text-white border-gray-50">
               <Image
                 src="/img/avax.svg"
                 layout="fixed"
-                height={30}
-                width={30}
+                height={32}
+                width={32}
               />
               <MetaMaskCard />
             </div>
