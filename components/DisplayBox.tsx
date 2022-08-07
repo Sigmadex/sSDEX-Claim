@@ -18,15 +18,15 @@ export default function DisplayBox({
   }
 
   return (
-    <div className="flex w-screen mt-8 justify-center drop-shadow-2xl scale-75 sm:scale-75 md:scale-100">
-      <div className="bg-gray-50 h-[25rem] w-[33rem] rounded-2xl grid justify-center items-center">
-        <h1 className="font-bold text-4xl text-center mt-4 text-gray-600">Claim sSDEX</h1>
-        <div className="flex w-96 text-xs text-center scale-90 sm:scale-100 items-center justify-center gap-2">
+    <div className="flex w-screen mt-8 justify-center drop-shadow-2xl scale-100 sm:scale-75 md:scale-100  md:h-[calc(100vh-theme(space.72))]">
+      <div className="bg-gray-50 h-[25rem] md:w-[36rem] m-3 md:m-0 p-5 md:p-0 rounded-2xl grid justify-center items-center">
+        <h1 className="font-bold text-2xl md:text-4xl text-center mt-4 text-gray-600">Claim sSDEX</h1>
+        <div className="flex md:w-96 text-xs text-center md:scale-90 sm:scale-100 sm:my-4 items-center justify-center gap-2">
           <p className="text-gray-700">This wallet already has claimed</p>
           <p className="font-bold text-xs">{claimedAmount} sSDEX!</p>
         </div>
 
-        <div className="h-28 w-[28rem] sm:w-[30rem] bg-gray-50 drop-shadow-md rounded-2xl grid items-center p-4">
+        <div className="h-28  sm:w-[30rem] bg-gray-50 drop-shadow-md rounded-2xl grid items-center p-4">
           <div className="flex justify-between items-center">
             <div className="flex gap-2 items-center">
               <Image
