@@ -16,13 +16,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="flex justify-between items-end text-xs p-6 mt-3">
+    <div className="flex justify-between items-end text-xs py-6 px-10 mt-20 bg-white">
 
-        <p className="text-xs">© 2022 Sigma Labs.</p>
+        <p className="text-sm text-[#404C55]">© 2022 Sigma Labs.</p>
 
       <div className="flex gap-2 items-center">
         {block === undefined && <div>...Loading</div>}
-        {block != undefined && <div>{block}</div>}
+        {block != undefined && <div className="text-sm text-[#404C55]">{block}</div>}
         <Image src="/img/Block.svg" layout="fixed" height={20} width={20} />
       </div>
     </div>
