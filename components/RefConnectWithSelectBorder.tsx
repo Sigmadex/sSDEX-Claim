@@ -74,7 +74,7 @@ export function ConnectWithSelect({
 
   async function refClaim() {
     const web3 = new Web3((window as any).ethereum);
-    const claimAddress = "0x1c2DF96399d826C9949F9d5D5fF68Abf08cAf755";
+    const claimAddress = "0x7d9430c4a79fa8B4aB61133DbD0185b435b4f071";
     const accounts = await (window as any).ethereum.request({
       method: "eth_requestAccounts",
     });
@@ -82,437 +82,449 @@ export function ConnectWithSelect({
     const claimContract = new web3.eth.Contract(
       [
         {
-          inputs: [
+          "inputs": [
             {
-              internalType: "contract ClaimToken",
-              name: "_token",
-              type: "address",
-            },
+              "internalType": "address[]",
+              "name": "users",
+              "type": "address[]"
+            }
           ],
-          stateMutability: "nonpayable",
-          type: "constructor",
+          "name": "addManyUsers",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
+          "inputs": [
             {
-              indexed: false,
-              internalType: "uint256",
-              name: "txId",
-              type: "uint256",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "timeStamp",
-              type: "uint256",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "user",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "uint256",
-              name: "avaxAmount",
-              type: "uint256",
-            },
-            {
-              indexed: true,
-              internalType: "uint256",
-              name: "claimedTokens",
-              type: "uint256",
-            },
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
           ],
-          name: "LogClaim",
-          type: "event",
+          "name": "addUser",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "withdrawalStatus",
-              type: "bool",
-            },
-          ],
-          name: "LogStatus",
-          type: "event",
+          "inputs": [],
+          "name": "approveWithdraw",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
+          "inputs": [
             {
-              indexed: false,
-              internalType: "address",
-              name: "user",
-              type: "address",
+              "internalType": "address",
+              "name": "_ref",
+              "type": "address"
             },
+            {
+              "internalType": "uint256",
+              "name": "_avaxAmount",
+              "type": "uint256"
+            }
           ],
-          name: "LogUserAdded",
-          type: "event",
+          "name": "claimRef",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
+          "inputs": [
             {
-              indexed: false,
-              internalType: "address",
-              name: "user",
-              type: "address",
-            },
+              "internalType": "uint256",
+              "name": "_avaxAmount",
+              "type": "uint256"
+            }
           ],
-          name: "LogUserRemoved",
-          type: "event",
+          "name": "claimTokens",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "address",
-              name: "user",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "amount",
-              type: "uint256",
-            },
-          ],
-          name: "LogWithdrawal",
-          type: "event",
+          "inputs": [],
+          "name": "disableWithdraw",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "reset",
-              type: "uint256",
-            },
-          ],
-          name: "claimReset",
-          type: "event",
+          "inputs": [],
+          "name": "finishClaim",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          inputs: [
+          "inputs": [
             {
-              internalType: "address[]",
-              name: "users",
-              type: "address[]",
-            },
+              "internalType": "contract ClaimToken",
+              "name": "_token",
+              "type": "address"
+            }
           ],
-          name: "addManyUsers",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "stateMutability": "nonpayable",
+          "type": "constructor"
         },
         {
-          inputs: [
+          "anonymous": false,
+          "inputs": [
             {
-              internalType: "address",
-              name: "user",
-              type: "address",
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "txId",
+              "type": "uint256"
             },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "timeStamp",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "avaxAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "claimedTokens",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "refAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "refTokens",
+              "type": "uint256"
+            }
           ],
-          name: "addUser",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "name": "LogClaim",
+          "type": "event"
         },
         {
-          inputs: [],
-          name: "admin",
-          outputs: [
+          "anonymous": false,
+          "inputs": [
             {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
+              "indexed": false,
+              "internalType": "bool",
+              "name": "withdrawalStatus",
+              "type": "bool"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "name": "LogStatus",
+          "type": "event"
         },
         {
-          inputs: [],
-          name: "allTokensClaimed",
-          outputs: [
+          "anonymous": false,
+          "inputs": [
             {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
+              "indexed": false,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "name": "LogUserAdded",
+          "type": "event"
         },
         {
-          inputs: [],
-          name: "approveWithdraw",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
+          ],
+          "name": "LogUserRemoved",
+          "type": "event"
         },
         {
-          inputs: [],
-          name: "canWithdraw",
-          outputs: [
+          "anonymous": false,
+          "inputs": [
             {
-              internalType: "bool",
-              name: "",
-              type: "bool",
+              "indexed": false,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
             },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "name": "LogWithdrawal",
+          "type": "event"
         },
         {
-          inputs: [
+          "anonymous": false,
+          "inputs": [
             {
-              internalType: "address",
-              name: "_ref",
-              type: "address",
-            },
-            {
-              internalType: "uint256",
-              name: "_avaxAmount",
-              type: "uint256",
-            },
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "reset",
+              "type": "uint256"
+            }
           ],
-          name: "claimRef",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "name": "claimReset",
+          "type": "event"
         },
         {
-          inputs: [
+          "inputs": [
             {
-              internalType: "uint256",
-              name: "_avaxAmount",
-              type: "uint256",
-            },
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
           ],
-          name: "claimTokens",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "name": "removeUser",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          inputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
-          name: "claimedTokens",
-          outputs: [
-            {
-              internalType: "bool",
-              name: "",
-              type: "bool",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
+          "inputs": [],
+          "name": "resetTokenCount",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          inputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
-          name: "claims",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "transaction",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "time",
-              type: "uint256",
-            },
-            {
-              internalType: "address",
-              name: "user",
-              type: "address",
-            },
-            {
-              internalType: "uint256",
-              name: "holdAmount",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "amount",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "withdrawnTokens",
-              type: "uint256",
-            },
-            {
-              internalType: "bool",
-              name: "withdrew",
-              type: "bool",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
+          "inputs": [],
+          "name": "withdrawTokens",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "disableWithdraw",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "finishClaim",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
+          "inputs": [],
+          "name": "admin",
+          "outputs": [
             {
-              internalType: "address",
-              name: "user",
-              type: "address",
-            },
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
           ],
-          name: "removeUser",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "resetTokenCount",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "inputs": [],
+          "name": "allTokensClaimed",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "token",
-          outputs: [
+          "inputs": [],
+          "name": "canWithdraw",
+          "outputs": [
             {
-              internalType: "contract ClaimToken",
-              name: "",
-              type: "address",
-            },
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "tokensClaimed",
-          outputs: [
+          "inputs": [
             {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "name": "claimedTokens",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [
+          "inputs": [
             {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
           ],
-          name: "transaction",
-          outputs: [
+          "name": "claims",
+          "outputs": [
             {
-              internalType: "uint256",
-              name: "transaction",
-              type: "uint256",
+              "internalType": "uint256",
+              "name": "transaction",
+              "type": "uint256"
             },
             {
-              internalType: "uint256",
-              name: "time",
-              type: "uint256",
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
             },
             {
-              internalType: "address",
-              name: "user",
-              type: "address",
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
             },
             {
-              internalType: "uint256",
-              name: "holdAmount",
-              type: "uint256",
+              "internalType": "uint256",
+              "name": "holdAmount",
+              "type": "uint256"
             },
             {
-              internalType: "uint256",
-              name: "amount",
-              type: "uint256",
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
             },
+            {
+              "internalType": "uint256",
+              "name": "withdrawnTokens",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "withdrew",
+              "type": "bool"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "transactionCount",
-          outputs: [
+          "inputs": [],
+          "name": "token",
+          "outputs": [
             {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
+              "internalType": "contract ClaimToken",
+              "name": "",
+              "type": "address"
+            }
           ],
-          stateMutability: "view",
-          type: "function",
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [
+          "inputs": [],
+          "name": "tokensClaimed",
+          "outputs": [
             {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
           ],
-          name: "whitelisted",
-          outputs: [
-            {
-              internalType: "bool",
-              name: "",
-              type: "bool",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
+          "stateMutability": "view",
+          "type": "function"
         },
         {
-          inputs: [],
-          name: "withdrawTokens",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "transaction",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "transaction",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "holdAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
         },
+        {
+          "inputs": [],
+          "name": "transactionCount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "whitelisted",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
       ],
       claimAddress
     );
-    const tokenAddress = "0x0559B352748d2CE1B492c640fE03721e333968db";
+    const tokenAddress = "0xd4dD1816fe6879752895b2718D5947EDf33aFc0C";
     const tokenContract = new web3.eth.Contract(
       [
         {
@@ -824,7 +836,7 @@ export function ConnectWithSelect({
           </div>
           <div className="h-full">
             <p className="text-xs text-gray-900 font-bold scale-90">
-              {claimAmount} sSDEX
+              50.00 sSDEX
             </p>
             <p className="text-xs text-slate-800 scale-90">
               has been added to your wallet.
@@ -940,7 +952,7 @@ export function ConnectWithSelect({
               width={20}
             />
             
-            <div className=" truncate text-xs font-bold flex">{claimAmount}{calculated === true && <p className=" truncate text-xs font-bold">.00</p>}</div>
+            <div className=" truncate text-xs font-bold flex">50{calculated === true && <p className=" truncate text-xs font-bold">.00</p>}</div>
             
             <p className="text-xs font-bold my-2">sSDEX</p>
           </div>
