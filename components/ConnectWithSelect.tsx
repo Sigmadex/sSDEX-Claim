@@ -63,7 +63,7 @@ export function ConnectWithSelect({
     return (
       <div>
         <div />
-        <button className="connectButton2 border border-gray-50 text-xs hover:border-green-700"
+        <button className="connectButton2 border w-138 rounded-[10px] h-9 border border-gray-400 focus:border-gray-100 hover:border-lime-800 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
           onClick={
             isActivating
               ? undefined
