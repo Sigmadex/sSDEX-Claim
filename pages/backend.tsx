@@ -6,11 +6,12 @@ import Footer from "../components/Footer";
 import { createClient } from "urql";
 import { useEffect, useState } from "react";
 import Web3 from "web3";
+import Link from "next/link";
 
 export default function Test() {
   const [data, setData] = useState([]);
   const [transactions, setTransactions] = React.useState<any[]>([]);
-  const [queryState, setQueryState] = useState<String>("txId");
+  const [queryState, setQueryState] = useState<String>("xId");
   const [queryTxId, setQueryTxId] = useState<String>("1");
   const [queryTxId2, setQueryTxId2] = useState<String>("1000");
   const [queryTimestamp, setQueryTimestamp] = useState<String>("1654748812");
@@ -45,7 +46,7 @@ export default function Test() {
 `);
 
   const APIURL =
-    "https://api.thegraph.com/subgraphs/name/luiscmogrovejo/claimv14"
+    "https://api.thegraph.com/subgraphs/name/luiscmogrovejo/claimv16"
   const onChangeQuery = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectId = e.target.value;
     if (selectId === queryId) {
@@ -72,7 +73,14 @@ export default function Test() {
 
   const queryAll = `
   query {
-    sigmadexGraphs(first: 100){
+    sigmadexGraphs(
+      first: 100
+      sort:{
+        field: txId,
+        order: ASC
+        }
+      )
+      {
       id
       count
       txId
@@ -225,11 +233,12 @@ query {
     const response = await client.query(query).toPromise();
     setData(response.data.sigmadexGraphs);
   }
-  const claimAddress = "0x1c2DF96399d826C9949F9d5D5fF68Abf08cAf755";
+  const claimAddress = "0x7d9430c4a79fa8B4aB61133DbD0185b435b4f071";
   useEffect(() => {
     fetchData();
     renderClaims()
   }, []);
+
   async function renderClaims() {
     const web3 = new Web3(
       "https://api.avax-test.network/ext/bc/C/rpc"
@@ -239,6 +248,84 @@ query {
     });
     const claimContract = new web3.eth.Contract(
       [
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "users",
+              "type": "address[]"
+            }
+          ],
+          "name": "addManyUsers",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
+          ],
+          "name": "addUser",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "approveWithdraw",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_ref",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_avaxAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "claimRef",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_avaxAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "claimTokens",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "disableWithdraw",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "finishClaim",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
         {
           "inputs": [
             {
@@ -281,6 +368,18 @@ query {
               "indexed": true,
               "internalType": "uint256",
               "name": "claimedTokens",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "refAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "refTokens",
               "type": "uint256"
             }
           ],
@@ -361,25 +460,26 @@ query {
         {
           "inputs": [
             {
-              "internalType": "address[]",
-              "name": "users",
-              "type": "address[]"
-            }
-          ],
-          "name": "addManyUsers",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
               "internalType": "address",
               "name": "user",
               "type": "address"
             }
           ],
-          "name": "addUser",
+          "name": "removeUser",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "resetTokenCount",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "withdrawTokens",
           "outputs": [],
           "stateMutability": "nonpayable",
           "type": "function"
@@ -412,13 +512,6 @@ query {
         },
         {
           "inputs": [],
-          "name": "approveWithdraw",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
           "name": "canWithdraw",
           "outputs": [
             {
@@ -428,37 +521,6 @@ query {
             }
           ],
           "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
-              "internalType": "address",
-              "name": "_ref",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256",
-              "name": "_avaxAmount",
-              "type": "uint256"
-            }
-          ],
-          "name": "claimRef",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
-              "internalType": "uint256",
-              "name": "_avaxAmount",
-              "type": "uint256"
-            }
-          ],
-          "name": "claimTokens",
-          "outputs": [],
-          "stateMutability": "nonpayable",
           "type": "function"
         },
         {
@@ -527,40 +589,6 @@ query {
             }
           ],
           "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "disableWithdraw",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "finishClaim",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
-              "internalType": "address",
-              "name": "user",
-              "type": "address"
-            }
-          ],
-          "name": "removeUser",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "resetTokenCount",
-          "outputs": [],
-          "stateMutability": "nonpayable",
           "type": "function"
         },
         {
@@ -658,13 +686,6 @@ query {
             }
           ],
           "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "withdrawTokens",
-          "outputs": [],
-          "stateMutability": "nonpayable",
           "type": "function"
         }
       ],
@@ -909,14 +930,17 @@ query {
                       {d.timeStamp || "No"}
                     </p>
                   </div>
-                  <div className="drop-shadow-lg  w-72 scale-90">
-                    <p className=" ">
+                  <div className="drop-shadow-lg  w-72 scale-90 cursor-pointer">
+                    <Link href={`https://testnet.snowtrace.io/address/${d.user}`}>
+                                        <p className=" ">
                       {d.user || "No"}
                     </p>
+                    </Link>
+
                   </div>
                   <div className="drop-shadow-lg  w-12 scale-90">
                     <p className=" ">
-                      {d.avaxAmount || "No"}
+                      {d.avaxAmount/1000 || "No"}
                     </p>
                   </div>
                   <div className="drop-shadow-lg w-12 scale-90">
@@ -924,10 +948,13 @@ query {
                       {d.claimedTokens / 10 ** 18 || "No"}
                     </p>
                   </div>
-                  <div className="drop-shadow-lg  w-80 scale-90">
+                  <div className="drop-shadow-lg  w-80 scale-90 cursor-pointer">
+                  <Link href={`https://testnet.snowtrace.io/address/${d.refAddress}`}>
+
                     <p className=" ">
                       {d.refAddress || "No"}
                     </p>
+                    </Link>
                   </div>
                   <div className="drop-shadow-lg w-16 scale-90">
                     <p className=" ">
