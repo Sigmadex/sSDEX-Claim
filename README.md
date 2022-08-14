@@ -5,13 +5,37 @@
 ## Summary
 <em>Sigmadex is proposing an optimal token distribution model for allowing individuals to claim free sSDEX tokens. Claiming will be available to anybody who possessed AVAX in their wallet leading up to the AVAX snapshot on December 31st, 2021. Anybody who has qualified for the early claim will be able to provide a referral link for anybody to claim a smaller amount of sSDEX. All claimers will be required to pay the gas fees.</em>
 
+# Next.js + Tailwind CSS
+
+This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+
+## Deploying
+
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+
+## How to use
+
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+
+```bash
+npx create-next-app --example with-tailwindcss with-tailwindcss-app
+# or
+yarn create next-app --example with-tailwindcss with-tailwindcss-app
+# or
+pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+```
+
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+
+# Specifications
+
 #### Claim will be seperated into 2 types:
 
 * Claim with AVAX in wallet before snapshot on Dec 31st 2021
 * Claim after Dec 31st 2021 with referral link
-
-## Motivation
-The idea of the claim drop is to leverage an efficent way and provide additional incentives for spreading the word about obtaining free sSDEX. We are looking to achieve large amount of independent sSDEX wallet holders and the event is primarily for brand awareness purposes.
 
 ## Process
 ### Proposed Data Storage
