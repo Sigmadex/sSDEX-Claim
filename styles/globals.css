@@ -1,0 +1,32 @@
+@import url("https://fonts.google.com/specimen/Work+Sans");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+html {
+font-family: 'Work Sans', sans-serif;
+}}
+
+ .connectButton {
+ @apply rounded-lg font-normal w-36 h-10 flex items-center justify-center 
+ }
+
+ .connectButton2 {
+ @apply rounded-lg font-normal flex items-center justify-center 
+ }
+
+ .connectButtonActive {
+ @apply rounded-xl font-semibold text-xs w-32 h-8  flex items-center justify-center
+ }
+
+ .inputSelect {
+ @apply relative h-10 rounded-md  text-xs pl-3 outline-0 placeholder-indigo-900
+ }
+
+ .container {
+  margin-left: auto;
+  margin-right: auto;
+ }
